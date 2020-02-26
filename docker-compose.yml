@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  postgres:
+    image: postgres:10
+    container_name: db
+    environment:
+      - POSTGRES_USER=database1_role
+      - POSTGRES_PASSWORD=database1_password
+      - POSTGRES_DB=database1
+    ports:
+      - 5432:5432

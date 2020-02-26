@@ -1,0 +1,20 @@
+{
+    "name": "sink-1",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+
+        "key.converter": "io.confluent.connect.avro.AvroConverter",
+        "key.converter.schema.registry.url": "http://localhost:8081",
+        "value.converter": "io.confluent.connect.avro.AvroConverter",
+        "value.converter.schema.registry.url": "http://localhost:8081",
+
+        "connection.url": "jdbc:postgresql://localhost:5432/database1",
+        "connection.user": "database1_role",
+        "connection.password": "database1_password",
+        "insert.mode": "upsert",
+        "auto.create": true,
+        "auto.evolve": true,
+        "topics": "kafkatweetss",
+        "pk.mode": "record_key"
+    }
+}
