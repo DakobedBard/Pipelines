@@ -1,0 +1,3 @@
+Launch ipython shell with spark
+
+PYSPARK_DRIVER_PYTHON=ipython pyspark
